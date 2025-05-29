@@ -3,22 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In</title>
+    <title>Sign Up</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/stylesignup.css">
 </head>
 <body>
     <main>
-        <div>
+        <div class="signup-container">
             <img src="assets/imgs/leloflixdark.png" alt="logo">
-            <form action="login.php" method="POST">
+            <form onsubmit="loginUser(this)" method="POST">
                 <input type="text" name="name" id="name" placeholder="Nome" required>
+                <input type="text" name="login" id="login" placeholder="Username" required>
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <input type="password" name="senha" id="password" placeholder="Criar Senha" required>
                 <input type="password" name="confirmSenha" id="confirmPassword" placeholder="Confirmar Senha" required>
-                <button type="submit">CRIAR CONTA</button>
+                <button type="submit" id="btn_salvar">CRIAR CONTA</button>
             </form>
         </div>
     </main>
+
+    <script src="assets/scripts/login.js"></script>
+    <script>
+        function salvaLogin(event) {
+            // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+            event.preventDefault();
+
+            // Obtem os dados do formulário
+            let login = document.getElementById('login').value;
+            let nome = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let senha = document.getElementById('password').value;
+            let senha2 = document.getElementById('confirmPassword').value;
+            
+            if (senha != senha2) {
+                alert('As senhas informadas não conferem.');
+                return;
+            }
+
+            // Adiciona o usuário no banco de dados
+            addUser(nome, login, senha, email);
+            alert('Usuário salvo com sucesso. Proceda com o login.');
+            window.location.href = "login.html";
+        }
+
+        // Associar salvamento ao botao
+        document.getElementById('btn_salvar').addEventListener('click', salvaLogin);
+    </script>
 </body>
 </html>

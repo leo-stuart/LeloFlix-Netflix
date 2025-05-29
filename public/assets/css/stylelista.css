@@ -112,6 +112,10 @@ input {
     display: none;
 }
 
+.categoria {
+    margin-top: 10em;
+}
+
 #pesquisamedia {
     position: absolute;
     right: 65px;
@@ -137,7 +141,7 @@ input {
 
 /* Inicio do MAIN */
 main {
-    padding-top: 5em;
+    padding-top: 20em;
     padding-left: 2em;
 }
 div img {

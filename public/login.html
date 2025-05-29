@@ -11,13 +11,38 @@
     <main>
         <div>
             <img src="assets/imgs/leloflixdark.png" alt="logo">
-            <form action="login.php" method="POST">
-                <input type="email" name="email" id="email" placeholder="Email" required>
+            <form id="login-form" onsubmit="loginUser(this)" method="POST">
+                <input type="text" name="email" id="username" placeholder="Email" required>
                 <input type="password" name="senha" id="password" placeholder="Senha" required>
                 <button type="submit">ENTRAR</button>
                 <a href="signup.html">Criar Conta</a>
             </form>
         </div>
     </main>
+    <script src="assets/scripts/login.js"></script>
+    <script>
+
+        // Declara uma função para processar o formulário de login
+        function processaFormLogin (event) {                
+                // Cancela a submissão do formulário para tratar sem fazer refresh da tela
+                event.preventDefault ();
+
+                // Obtem os dados de login e senha a partir do formulário de login
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+
+                // Valida login e se estiver ok, redireciona para tela inicial da aplicação
+                resultadoLogin = loginUser (username, password);
+                if (resultadoLogin) {
+                    window.location.href = 'index.html';
+                }
+                else { // Se login falhou, avisa ao usuário
+                    alert ('Usuário ou senha incorretos');
+                }
+        }
+
+        // Associa a funçao processaFormLogin  formulário adicionado um manipulador do evento submit
+        document.getElementById ('login-form').addEventListener ('submit', processaFormLogin);      
+    </script>
 </body>
 </html>

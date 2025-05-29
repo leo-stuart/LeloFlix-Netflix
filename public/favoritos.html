@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Favoritos - LeloFlix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styleslista.css">
+</head>
+
+<body>
+    <script src="assets/scripts/login.js"></script>
+    <script>
+        // Verifica se o usuário já esta logado e se negativo, redireciona para tela de login        
+        if (!usuarioCorrente.login) {
+            window.location.href = LOGIN_URL;
+        }
+        function initPage() {
+            // Associa a função de logout ao botão
+            document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            // Informa o nome do usuário logado
+            document.getElementById('nomeUsuarioDropdown').innerHTML = usuarioCorrente.login;
+        }
+
+        // Dropdown toggle logic
+        window.addEventListener('DOMContentLoaded', function () {
+            var dropdown = document.getElementById('userDropdown');
+            var toggle = document.getElementById('userDropdownToggle');
+            var content = document.getElementById('dropdownContent');
+            var nomeUsuarioDropdown = document.getElementById('nomeUsuarioDropdown');
+            var btnLogout = document.getElementById('btn_logout');
+            var addFilmeLi = document.getElementById('addFilmeLi');
+
+            // Hide dropdown content initially
+            content.style.display = 'none';
+
+            // Defensive: check if addFilmeLi exists
+            if (addFilmeLi) {
+                addFilmeLi.style.display = 'none';
+            }
+
+            // Set user name and dropdown/logout visibility
+            if (typeof usuarioCorrente !== 'undefined' && usuarioCorrente.login) {
+                nomeUsuarioDropdown.textContent = usuarioCorrente.nome;
+                btnLogout.style.display = 'block';
+                toggle.href = "#";
+                toggle.onclick = function (e) {
+                    e.preventDefault();
+                    var isOpen = dropdown.classList.toggle('show');
+                    content.style.display = isOpen ? 'block' : 'none';
+                };
+                // Show "Add Filme" only if admin
+                if (usuarioCorrente.admin && addFilmeLi) {
+                    addFilmeLi.style.display = 'list-item';
+                }
+            } else {
+                nomeUsuarioDropdown.textContent = 'Entrar';
+                btnLogout.style.display = 'none';
+                toggle.href = "login.html";
+                toggle.onclick = null;
+                if (addFilmeLi) addFilmeLi.style.display = 'none';
+            }
+
+            // Hide dropdown when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('show');
+                    content.style.display = 'none';
+                }
+            });
+
+            // Hide dropdown after logout click
+            btnLogout.addEventListener('click', function (e) {
+                e.stopPropagation();
+                dropdown.classList.remove('show');
+                content.style.display = 'none';
+            });
+        });
+
+        // Associa ao evento de carga da página a função para verificar se o usuário está logado
+        window.addEventListener('load', initPage);
+    </script>
+    <header class="menu">
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <img class="logo" src="assets/imgs/leloflixdark.png" alt="logo.png">
+
+            <input type="checkbox" class="toggle-search" id="toggleSearch">
+            <label class="search-icon" for="toggleSearch">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div class="pesquisa-media">
+                <form id="searchFormMedia" action="search.html" method="GET">
+                    <input type="button" class="search-button" id="searchBtnMedia">
+                    <input type="search" id="searchInputMedia" placeholder="Pesquisa" class="campo-pesquisa">
+                </form>
+            </div>
+
+            <input type="checkbox" class="toggle" id="toggle">
+            <label class="menu-icon" for="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div class="hidebar">
+                <div class="menu-nav">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="generos.html">Gêneros</a></li>
+                        <li><a href="favoritos.html">Meus Favoritos</a></li>
+                        <li id="addFilmeLi" style="display:none;"><a href="criar.html">Add Filme</a></li>
+                    </ul>
+                </div>
+                <div class="direito">
+                    <div class="pesquisa">
+                        <form id="searchFormSidebar" action="search.html" method="GET">
+                            <input type="button" class="search-button" id="searchBtnSidebar">
+                            <input type="text" id="searchInputSidebar" placeholder="Pesquisa" class="campo-pesquisa">
+                        </form>
+                    </div>
+                    <!-- Dropdown menu for user -->
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="login.html" id="userDropdownToggle">
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span id="nomeUsuarioDropdown">Entrar</span>
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="dropdown-content" id="dropdownContent" style="display: none;">
+                            <button id="btn_logout" style="width:100%;text-align:left;background:none;border:none;padding:8px 16px;cursor:pointer;display:none;">Logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="margin-top: 80px;">
+        <h1 class="categoria">Meus Favoritos</h1>
+        <div class="netflix-carousel">
+            <div class="row-filme carousel-track" id="favorites-container">
+                <!-- Favorites will be loaded here -->
+            </div>
+        </div>
+    </main>
+    <script src="assets/scripts/app.js"></script>
+    <script>
+        // Load favorites when page loads
+        window.addEventListener('load', function() {
+            const favoritesContainer = document.getElementById('favorites-container');
+            const currentUser = usuarioCorrente.login;
+            
+            if (!currentUser) {
+                favoritesContainer.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #fff;">
+                        <h3>Por favor, faça login para ver seus favoritos</h3>
+                        <p><a href="login.html" style="color: #e50914; text-decoration: none;">Clique aqui para fazer login</a></p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Get user's favorites from localStorage
+            const userFavorites = JSON.parse(localStorage.getItem(`favorites_${currentUser}`)) || {};
+            const favoriteIds = Object.keys(userFavorites).filter(id => userFavorites[id]);
+            
+            if (favoriteIds.length === 0) {
+                favoritesContainer.innerHTML = `
+                    <div style="text-align: center; padding: 40px; color: #fff;">
+                        <h3>Você ainda não tem filmes favoritos</h3>
+                        <p>Adicione filmes aos favoritos clicando no ícone de coração</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Fetch all movies and filter favorites
+            fetch('/filmes')
+                .then(res => res.json())
+                .then(filmes => {
+                    const favoriteMovies = filmes.filter(filme => 
+                        favoriteIds.includes(filme.id.toString())
+                    );
+                    
+                    favoritesContainer.innerHTML = '';
+                    favoriteMovies.forEach(filme => {
+                        favoritesContainer.innerHTML += createMovieCard(filme, true);
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading favorites:', error);
+                    favoritesContainer.innerHTML = `
+                        <div style="text-align: center; padding: 40px; color: #fff;">
+                            <h3>Erro ao carregar favoritos</h3>
+                            <p>Por favor, tente novamente mais tarde</p>
+                        </div>
+                    `;
+                });
+        });
+    </script>
+</body>
+
+</html> 
