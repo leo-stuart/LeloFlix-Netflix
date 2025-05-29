@@ -1,0 +1,606 @@
+:root {
+    --text-color: #F5F5F5;
+    --background-color: #0A0F1E;
+    --dark-shadow: #081020;
+    --link-hover: #0088FF;
+    --button-text: #081020;
+    --box-film-bg: #0033CC;
+    --box-film-shadow: #00A2FF;
+    --box-film-border: #081020;
+}
+
+* {
+    margin: 0;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Inter', sans-serif;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+div ul {
+    display: flex;
+    list-style: none;
+}
+
+h1 {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    text-shadow: 0.05rem 0.05rem 0.5rem var(--dark-shadow);
+}
+
+h3 {
+    margin: 0 auto;
+    text-shadow: 0.05rem 0.05rem 0.5rem var(--dark-shadow);
+}
+
+a {
+    text-decoration: none;
+    margin-left: 0.9em;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-shadow: 0.1rem 0.1rem 0.25rem var(--dark-shadow);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button a {
+    color: var(--button-text);
+}
+
+button:hover a {
+    color: var(--link-hover);
+    text-shadow: 0.1rem 0.1rem 0.25rem var(--dark-shadow);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: var(--background-color);
+    cursor: pointer;
+    transition: 0.5s;
+    color: var(--text-color);
+}
+
+div img {
+    width: 100%;
+    height: 55%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin: 0 auto;
+}
+
+input {
+    border: none;
+    background-color: var(--text-color);
+    border-radius: 0.75rem;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.miniBoxFilme {
+  width: 16em;
+  height: 9em;
+  margin: 0.5em;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem var(--dark-shadow);
+  border: 0.15rem solid var(--box-film-border);
+  flex-shrink: 0;
+  transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  z-index: 1; /* Base z-index */
+}
+
+.boxFilme {
+    position: absolute;
+    bottom: -55%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--box-film-bg);
+    width: 18em;
+    height: 6em;
+    margin: 0;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    box-shadow: 0 0 1rem var(--box-film-shadow);
+    border: 0.15rem solid var(--box-film-border);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    z-index: -1; /* Just below the card itself */
+  }
+
+.miniBoxFilme:hover .boxFilme,
+.boxFilme:hover {
+    border: 0.2rem solid var(--box-film-shadow);
+    box-shadow: 0 0 1rem var(--box-film-shadow);
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+}
+
+.miniBoxFilme:hover {
+    border: 0.2rem solid var(--box-film-shadow);
+    height: 10em;
+    width: 18em;
+    transform: scale(0.7);
+    box-shadow: 0 0 1rem var(--box-film-shadow);
+    cursor: pointer;
+    z-index: 100 !important; /* High but below buttons */
+    position: relative;
+    margin-top: -2em;
+    transition: transform 0.5s ease, margin-top 0.5s ease;
+    overflow: visible;
+  }
+
+.filmeSpecs {
+    margin: 0.5em 1.3em;
+}
+
+.filmeSpecs div {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.likeAdd {
+    margin: 0.3em 1.3em;
+    padding-top: 0.5rem;
+}
+
+.fa-heart-o {
+    background: transparent;
+    color: var(--text-color);
+}
+
+.likeAdd .fa-plus {
+    background: transparent;
+    color: var(--text-color);
+}
+
+.likeAdd button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.categoria {
+    margin: 0.5rem 0.5rem 0.5rem 1.75rem;
+}
+
+.footer {
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer ul li a {
+    font-size: 0.3em;
+    color: var(--text-color);
+}
+
+button i {
+    color: var(--button-text);
+}
+
+button:hover i {
+    color: var(--link-hover);
+    transition: 0.5s;
+}
+
+.menu {
+    background: linear-gradient(to bottom, var(--background-color) 0%, rgba(0, 0, 0, 0) 100%);
+    position: fixed;
+    width: 100%;
+    height: 3.2rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    z-index: 2;
+}
+
+.hidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.filme-destaque {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--background-color));
+    background-color: transparent;
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.filme-destaque button {
+    color: var(--box-film-shadow);
+}
+
+.container-destaque {
+    height: 20%;
+    margin: 15rem 0 0 1.75rem;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 0;
+}
+
+.container-destaque button {
+    border-radius: 1rem;
+    border: none;
+    padding: 0.7em 0.8em;
+}
+
+.genero {
+    margin: 0;
+}
+
+.logo {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0;
+}
+
+.thumbnail {
+    box-shadow: 0 0.5rem 1rem var(--dark-shadow);
+}
+
+.maior-thumbnail {
+    box-shadow: 0 0.5rem 1rem var(--dark-shadow);
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.direito {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    min-width: 7.5rem;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.pesquisa {
+    background-color: var(--text-color);
+    border-radius: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.pesquisa input {
+    font-size: 0.8em;
+    color: var(--button-text);
+}
+
+.search-button {
+    cursor: pointer;
+    background: url('imgs/pesquisa.png') no-repeat center;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 1rem;
+}
+
+.row-filme {
+    display: inline-flex;
+    width: 95%;
+    margin: 0 0.5rem 0.5rem 1rem;
+    overflow-x: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 1rem 1rem 1.5rem 1rem;
+}
+
+.trailer {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.toggle,
+.menu-icon {
+    display: none;
+}
+
+.toggle {
+    display: none;
+}
+
+.toggle-search,
+.search-icon {
+    display: none;
+}
+
+.toggle-search {
+    display: none;
+}
+
+.pesquisa-media {
+    position: absolute;
+    right: 3.25rem;
+    width: 7em;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 0;
+    max-width: 100%;
+    display: none;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 0;
+    transition: 0.5s;
+}
+
+.campo-pesquisa-media {
+    width: 5em;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    background-color: white;
+    transition: 0.5s;
+    color: var(--button-text);
+}
+
+.netflix-carousel {
+    position: relative !important;
+    width: 95% !important;
+    margin: 0 auto 50px auto !important;
+    padding: 0 40px !important;
+    overflow: visible !important;
+  }
+
+.carousel-track {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: visible !important; /* Force visible overflow */
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 30px 0 80px 0;
+  margin-bottom: -40px;
+  position: relative !important;
+  z-index: 1 !important; /* Keep this lower than button z-index */
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.row-filme {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.carousel-btn {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    color: white !important;
+    border: none !important;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    z-index: 9999 !important; /* Extremely high z-index */
+    border-radius: 50% !important;
+    transition: background-color 0.3s !important;
+    pointer-events: auto !important; /* Ensure clicks register */
+    user-select: none !important;
+    /* Visual enhancements to make buttons more noticeable */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8) !important;
+  }
+
+.carousel-btn:hover {
+    background-color: rgba(0, 51, 204, 0.9) !important; /* Use your --box-film-bg color */
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+.carousel-btn.left {
+    left: 0 !important;
+}
+
+.carousel-btn.right {
+    right: 0 !important;
+    margin-right: 1em;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    justify-content: space-between;
+}
+
+.col{
+    width: 30%;
+}
+
+.col p{
+    font-size: 0.8em;
+}
+/* Fim do Desktop */
+
+@media screen and (max-width: 840px) {
+
+    /* HEADER */
+    .pesquisa {
+        display: none;
+    }
+
+    .hidebar {
+        display: none;
+        background-color: var(--background-color);
+        position: fixed;
+        width: 100vw;
+        max-width: 100%;
+        height: 35%;
+        bottom: 0;
+        left: 0;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        padding: 1rem;
+        box-shadow: 0 -0.5rem 1rem var(--box-film-shadow);
+        transition: 0.5s;
+    }
+
+    .menu-nav {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu-nav ul {
+        display: block;
+        margin: 1em 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .menu-nav ul:nth-child(3) {
+        margin: 0;
+    }
+
+    .menu-nav li {
+        margin: 1em 0;
+        max-width: 100%;
+    }
+
+    .menu-nav li:first-child {
+        margin: 0;
+    }
+
+    .pesquisa {
+        width: 7em;
+        margin-bottom: 1em;
+        margin-left: 0.75rem;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .campo-pesquisa {
+        width: 5em;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .direito {
+        display: block;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1em;
+        color: var(--text-color);
+    }
+
+    .menu-icon i.fa-bars {
+        display: inline;
+    }
+
+    .menu-icon i.fa-times {
+        display: none;
+    }
+
+    .toggle:checked+.menu-icon i.fa-bars {
+        display: none;
+    }
+
+    .toggle:checked+.menu-icon i.fa-times {
+        display: inline;
+    }
+
+    .toggle:checked~.hidebar {
+        display: block;
+    }
+
+    .search-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 1em;
+        color: var(--text-color);
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+
+    .search-icon i.fa-search {
+        display: inline;
+    }
+
+    .search-icon i.fa-times {
+        display: none;
+    }
+
+    .toggle-search:checked+.search-icon i.fa-search {
+        display: none;
+    }
+
+    .toggle-search:checked+.search-icon i.fa-times {
+        display: inline;
+    }
+
+    .toggle-search:checked~.pesquisa-media {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    section .row-filme {
+        height: 20em;
+    }
+
+    .miniBoxFilme {
+        height: 16em;
+        width: 9em;
+    }
+
+    .maior-thumbnail {
+        height: 100%;
+        width: 100%;
+    }
+    
+
+}

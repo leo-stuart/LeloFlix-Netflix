@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/stylelista.css">
+</head>
+<body>
+    <header id="menu">
+        <nav>
+            <img id="logo" src="imgs/leloflixdark.png" alt="logo.png">
+
+            <input type="checkbox" id="toggleSearch">
+            <label id="searchIcon" for="toggleSearch">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div id="pesquisamedia">
+                <form action="search.php" method="GET">
+                    <input type="button" id="search">
+                    <input type="text" placeholder="Pesquisa" id="campoPesquisa">
+                </form>
+            </div>
+
+            <input type="checkbox" id="toggle">
+            <label id="menuIcon" for="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div id="hidebar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="generos.html">Gêneros</a></li>
+                        <li><a href="#">Minha Lista</a></li>
+                    </ul>
+                </div>
+                <div id="direito">
+                    <div id="pesquisa">
+                        <form action="search.php" method="GET">
+                            <input type="button" id="search">
+                            <input type="text" placeholder="Pesquisa" id="campoPesquisa">
+                        </form>
+                    </div>
+                    <p><a href="login.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Entrar</a></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Minha Lista</h1>
+        <div class="container">
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <h1>Meus Curtidos</h1>
+        <div class="container">
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="miniBoxFilme">
+                <img src="imgs/thumbfilme.jpeg" alt="filme thumbnail" id="maiorThumbnail">
+                <div class="boxFilme">
+                    <div class="likeAdd">
+                        <button><i class="fa fa-heart-o" aria-hidden="true"></i></button>
+                        <button><i class="fa fa-plus" aria-hidden="true"></i></button>
+                    </div>
+                    <article class="filmeSpecs">
+                        <h2>Titulo do Filme</h2>
+                        <div>
+                            <h3 id="genero">Genero</h3>
+                            <h3>Ano</h3>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footerEsquerdo">
+                <ul>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footerDireito">
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Informações Corporativas</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

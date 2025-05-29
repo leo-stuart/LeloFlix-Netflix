@@ -1,0 +1,104 @@
+* {
+    margin: 0;    
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    background-color: #0033CC;
+}
+
+body {
+    /* background-image: url('imgs/bglogin.jpg'); */
+    background: linear-gradient(to bottom, #0A0F1E 0%, #0033CC 100%);
+    height: 100vh;
+
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    display: flexbox;
+    justify-content: center;
+    background-color: #0A0F1E;
+    width: 30%;
+    min-width: 400px;
+    height: 760px;
+    margin: 90px auto;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px 5px #020506;
+    padding: 0px 0px 50px 0px;
+    flex-shrink: 0;
+
+}
+
+img {
+    display: block;
+    width: 70%;
+    margin: 10px auto;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+input {
+    display: block;
+    background-color: #0A0F1E;
+    width: 70%;
+    height: 3em;
+    border: none;
+    border-bottom: 2px solid #727272;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #f5f5f5;
+}
+
+input::placeholder {
+    color: #f5f5f5; /* Change this to the desired color */
+    opacity: 1; /* Ensure the color is fully applied */
+}
+
+button {
+    color: #0A0F1E;
+    display: block;
+    width: 70%;
+    height: 3.5em;
+    border-radius: 40px;
+    margin: 20px auto;
+    background-color: #f5f5f5;
+    border: none;
+}
+
+button:hover {
+    background-color: #0033CC;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #f5f5f5;
+}
+
+a {
+    display: block;
+    color: #f5f5f5;
+    text-decoration: none;
+    margin-left: 223px;
+    border-top: 0;
+    font-size: 0.8em;
+}
+
+a:hover {
+    color: #0033CC;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+    div {
+        margin-top: 50px;
+        min-width: 300px;
+    }
+    
+}

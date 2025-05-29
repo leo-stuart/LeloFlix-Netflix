@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generos de Filmes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylegeneros.css">
+</head>
+
+<body>
+    <header id="menu">
+        <nav>
+            <img id="logo" src="imgs/leloflixdark.png" alt="logo.png">
+
+            <input type="checkbox" id="toggleSearch">
+            <label id="searchIcon" for="toggleSearch">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div id="pesquisamedia">
+                <form action="search.php" method="GET">
+                    <input type="button" id="search">
+                    <input type="text" placeholder="Pesquisa" id="campoPesquisa">
+                </form>
+            </div>
+
+            <input type="checkbox" id="toggle">
+            <label id="menuIcon" for="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <i class="fa fa-times" aria-hidden="true"></i>
+            </label>
+            <div id="hidebar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#">Gêneros</a></li>
+                        <li><a href="lista.html">Minha Lista</a></li>
+                    </ul>
+                </div>
+                <div id="direito">
+                    <div id="pesquisa">
+                        <form action="search.php" method="GET">
+                            <input type="button" id="search">
+                            <input type="text" placeholder="Pesquisa" id="campoPesquisa">
+                        </form>
+                    </div>
+                    <p><a href="login.html"><i class="fa fa-user-circle-o" aria-hidden="true"></i>Entrar</a></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="container">
+            <div class="genero">
+                <img src="imgs/generos/acao.jpg" alt="acao.jpg">
+                <p>Ação</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/aventura.jpg" alt="aventura.jpg">
+                <p>Aventura</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/comedia.jpg" alt="comedia.jpg">
+                <p>Comédia</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/drama.webp" alt="drama.jpg">
+                <p>Drama</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/fantasia.jpg" alt="fantasia.jpg">
+                <p>Fantasia</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/ficcao.jpg" alt="ficcao.jpg">
+                <p>Ficção Científica</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/romance.jpg" alt="romance.jpg">
+                <p>Romance</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/suspense.jpg" alt="suspense.jpg">
+                <p>Suspense</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/musical.jpg" alt="suspense.jpg">
+                <p>Musical</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/terror.jpg" alt="suspense.jpg">
+                <p>Terror</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/documentario.jpg" alt="suspense.jpg">
+                <p>Documentário</p>
+            </div>
+            <div class="genero">
+                <img src="imgs/generos/filmenacional.webp" alt="suspense.jpg">
+                <p>Filmes Nacionais</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footerEsquerdo">
+                <ul>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="footerDireito">
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Informações Corporativas</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

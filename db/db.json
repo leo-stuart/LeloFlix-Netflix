@@ -1,0 +1,415 @@
+{
+  "usuarios": [
+    {
+      "id": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com"
+    },
+    {
+      "id": "ec37c83d-4b7f-458d-9e10-3fda7d37cd3e",
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    }
+  ],
+  "filmes": [
+    {
+      "id": 1,
+      "titulo": "Oppenheimer",
+      "genero": [
+        "Drama",
+        "Histórico",
+        "Biografia"
+      ],
+      "ano": "2023",
+      "resumo": "A dramatização da vida de J. Robert Oppenheimer, o físico teórico por trás do desenvolvimento da bomba atômica durante o Projeto Manhattan.",
+      "avaliacao": "8.3",
+      "imagemdesktop": "/assets/imgs/filmes/oppenheimer.jpg",
+      "imagemmobile": "/assets/imgs/filmes/oppenheimer1.jpg",
+      "trailer": "https://www.youtube.com/watch?v=CaZCZUyQb40",
+      "atores": [
+        "Cillian Murphy",
+        "Emily Blunt",
+        "Robert Downey Jr.",
+        "Matt Damon"
+      ],
+      "criadores": [
+        "Christopher Nolan",
+        "Emma Thomas"
+      ],
+      "duracao": "180 minutos",
+      "filming_locations": [
+        {
+          "name": "Los Alamos, New Mexico, USA",
+          "latitude": [-106.3000, 35.8780]
+        },
+        {
+          "name": "Berkeley, California, USA",
+          "latitude": [-122.2730, 37.8715]
+        },
+        {
+          "name": "Princeton, New Jersey, USA",
+          "latitude": [-74.6551, 40.3431]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Conclave",
+      "genero": [
+        "Thriller",
+        "Político"
+      ],
+      "ano": "2024",
+      "resumo": "O Cardeal Lawrence é encarregado de liderar um dos eventos mais secretos e antigos do mundo: a seleção de um novo Papa.",
+      "avaliacao": "7.5",
+      "imagemdesktop": "/assets/imgs/filmes/conclave.webp",
+      "imagemmobile": "/assets/imgs/filmes/conclave1.avif",
+      "trailer": "https://www.youtube.com/watch?v=JX9jasdi3ic",
+      "atores": [
+        "Ralph Fiennes",
+        "Stanley Tucci",
+        "John Lithgow",
+        "Isabella Rossellini"
+      ],
+      "criadores": [
+        "Edward Berger",
+        "Robert Harris"
+      ],
+      "duracao": "120 minutos",
+      "filming_locations": [
+        {
+          "name": "Cinecittà Studios, Rome, Italy",
+          "latitude": [12.5770, 41.8517]
+        },
+        {
+          "name": "Rome, Italy (general)",
+          "latitude": [12.4964, 41.9028]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Ainda Estou Aqui",
+      "genero": [
+        "Drama",
+        "Biografia"
+      ],
+      "ano": "2024",
+      "resumo": "Uma mulher casada com um ex-político durante a ditadura militar no Brasil é obrigada a se reinventar e traçar um novo destino para si e seus filhos após a prisão do marido.",
+      "avaliacao": "8.7",
+      "imagemdesktop": "/assets/imgs/filmes/ainda.webp",
+      "imagemmobile": "/assets/imgs/filmes/ainda.webp",
+      "trailer": "https://www.youtube.com/watch?v=_NzqP0jmk3o",
+      "atores": [
+        "Fernanda Torres",
+        "Fernanda Montenegro",
+        "Selton Mello",
+        "Eliana Paiva"
+      ],
+      "criadores": [
+        "Walter Salles",
+        "Marcelo Rubens Paiva"
+      ],
+      "duracao": "137 minutos",
+      "filming_locations": [
+        {
+          "name": "Rio de Janeiro, Brazil",
+          "latitude": [-43.1729, -22.9068]
+        },
+        {
+          "name": "São Paulo, Brazil",
+          "latitude": [-46.6333, -23.5505]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "filming_locations": []
+    },
+    {
+      "id": 5,
+      "titulo": "Duna: Parte Dois",
+      "genero": [
+        "Ficção Científica",
+        "Aventura"
+      ],
+      "ano": "2024",
+      "resumo": "Paul Atreides une forças com Chani e os Fremen enquanto busca vingança contra os conspiradores que destruíram sua família.",
+      "avaliacao": "8.5",
+      "imagemdesktop": "/assets/imgs/filmes/duna.jpg",
+      "imagemmobile": "/assets/imgs/filmes/duna.jpg",
+      "trailer": "https://www.youtube.com/watch?v=Way9Dexny3w",
+      "atores": [
+        "Timothée Chalamet",
+        "Zendaya",
+        "Rebecca Ferguson",
+        "Josh Brolin"
+      ],
+      "criadores": [
+        "Denis Villeneuve",
+        "Mary Parent"
+      ],
+      "duracao": "166 minutos",
+      "filming_locations": [
+        {
+          "name": "Wadi Rum, Jordan",
+          "latitude": [35.4190, 29.5733]
+        },
+        {
+          "name": "Budapest, Hungary",
+          "latitude": [19.0402, 47.4979]
+        },
+        {
+          "name": "Altivole, Treviso, Italy (Tomba Brion)",
+          "latitude": [11.9167, 45.7475]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "titulo": "Cidade de Deus",
+      "genero": [
+        "Crime",
+        "Drama"
+      ],
+      "ano": "2002",
+      "resumo": "As trajetórias de duas crianças divergem nas favelas do Rio de Janeiro: enquanto uma se esforça para se tornar fotógrafo, a outra se torna chefe do tráfico.",
+      "avaliacao": "8.6",
+      "imagemdesktop": "/assets/imgs/filmes/cidade.jpg",
+      "imagemmobile": "/assets/imgs/filmes/cidade.jpg",
+      "trailer": "https://www.youtube.com/watch?v=fZJUKixyeXM",
+      "atores": [
+        "Alexandre Rodrigues",
+        "Leandro Firmino",
+        "Phellipe Haagensen",
+        "Douglas Silva"
+      ],
+      "criadores": [
+        "Fernando Meirelles",
+        "Kátia Lund"
+      ],
+      "duracao": "130 minutos",
+      "filming_locations": [
+        {
+          "name": "Cidade de Deus, Rio de Janeiro, Brazil",
+          "latitude": [-43.3719, -22.9533]
+        },
+        {
+          "name": "Nova Sepetiba, Rio de Janeiro, Brazil (some scenes representing older favela parts)",
+          "latitude": [-43.6900, -22.9600]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "titulo": "Titanic",
+      "genero": [
+        "Drama",
+        "Romance"
+      ],
+      "ano": "1997",
+      "resumo": "Uma aristocrata se apaixona por um artista pobre a bordo do luxuoso, porém condenado, RMS Titanic.",
+      "avaliacao": "7.8",
+      "imagemdesktop": "/assets/imgs/filmes/titanic.webp",
+      "imagemmobile": "/assets/imgs/filmes/titanic1.jpg",
+      "trailer": "https://www.youtube.com/watch?v=I7c1etV7D7g",
+      "atores": [
+        "Leonardo DiCaprio",
+        "Kate Winslet",
+        "Billy Zane",
+        "Kathy Bates"
+      ],
+      "criadores": [
+        "James Cameron",
+        "James Cameron"
+      ],
+      "duracao": "194 minutos",
+      "filming_locations": [
+        {
+          "name": "Fox Baja Studios, Rosarito, Mexico",
+          "latitude": [-117.0500, 32.2864]
+        },
+        {
+          "name": "North Atlantic Ocean (some expedition footage)",
+          "latitude": [-49.9483, 41.7269]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "titulo": "Vingadores: Ultimato",
+      "genero": [
+        "Ação",
+        "Aventura"
+      ],
+      "ano": "2019",
+      "resumo": "Os Vingadores se reúnem para reverter as ações de Thanos e restaurar o equilíbrio do universo.",
+      "avaliacao": "8.4",
+      "imagemdesktop": "/assets/imgs/filmes/vingadores.webp",
+      "imagemmobile": "/assets/imgs/filmes/ultimato1.jpg",
+      "trailer": "https://www.youtube.com/watch?v=PgrmbRID0eY",
+      "atores": [
+        "Robert Downey Jr.",
+        "Chris Evans",
+        "Mark Ruffalo",
+        "Chris Hemsworth"
+      ],
+      "criadores": [
+        "Anthony Russo",
+        "Joe Russo"
+      ],
+      "duracao": "181 minutos",
+      "filming_locations": [
+        {
+          "name": "Pinewood Atlanta Studios, Fayetteville, Georgia, USA",
+          "latitude": [-84.4977, 33.4718]
+        },
+        {
+          "name": "Downtown Atlanta, Georgia, USA",
+          "latitude": [-84.3863, 33.7537]
+        },
+        {
+          "name": "The Gulch area, Atlanta (for New York scenes)",
+          "latitude": [-84.3961, 33.7530]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "titulo": "Avatar: O Caminho da Água",
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Fantasia"
+      ],
+      "ano": "2022",
+      "resumo": "Jake Sully e Neytiri formam uma família e fazem de tudo para ficarem juntos. No entanto, eles devem sair de casa e explorar as regiões de Pandora quando uma antiga ameaça ressurge.",
+      "avaliacao": "7.6",
+      "imagemdesktop": "/assets/imgs/filmes/avatar.jpg",
+      "imagemmobile": "/assets/imgs/filmes/avatar.jpg",
+      "trailer": "https://www.youtube.com/watch?v=x5pZI-DmtrE",
+      "atores": [
+        "Sam Worthington",
+        "Zoe Saldana",
+        "Sigourney Weaver",
+        "Stephen Lang"
+      ],
+      "criadores": [
+        "James Cameron",
+        "James Cameron"
+      ],
+      "duracao": "192 minutos",
+      "filming_locations": [
+        {
+          "name": "Manhattan Beach Studios, California, USA (Performance Capture)",
+          "latitude": [-118.3777, 33.8879]
+        },
+        {
+          "name": "Wellington, New Zealand (Stone Street Studios, Weta Digital)",
+          "latitude": [174.7855, -41.3000]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "titulo": "Star Wars: O Despertar da Força",
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Fantasia"
+      ],
+      "ano": "2015",
+      "resumo": "Trinta anos após a derrota do Império, uma nova ameaça surge. Rey, uma catadora de sucata, e Finn, um ex-stormtrooper, devem se unir a Han Solo e Chewbacca para buscar a esperança de restaurar a paz na galáxia.",
+      "avaliacao": "7.8",
+      "imagemdesktop": "/assets/imgs/filmes/starwars.webp",
+      "imagemmobile": "/assets/imgs/filmes/starwars.webp",
+      "trailer": "https://www.youtube.com/watch?v=4r0287tUEgk",
+      "atores": [
+        "Daisy Ridley",
+        "John Boyega",
+        "Harrison Ford",
+        "Adam Driver"
+      ],
+      "criadores": [
+        "J.J. Abrams",
+        "Kathleen Kennedy"
+      ],
+      "duracao": "138 minutos",
+      "filming_locations": [
+        {
+          "name": "Pinewood Studios, Buckinghamshire, England",
+          "latitude": [-0.5339, 51.5483]
+        },
+        {
+          "name": "Abu Dhabi, UAE (Jakku desert scenes)",
+          "latitude": [54.3773, 24.4539]
+        },
+        {
+          "name": "Skellig Michael, Ireland",
+          "latitude": [-10.5403, 51.7708]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "titulo": "Vingadores: Guerra Infinita",
+      "genero": [
+        "Ação",
+        "Aventura",
+        "Ficção Científica"
+      ],
+      "ano": "2018",
+      "resumo": "Os Vingadores e seus aliados unem forças para enfrentar Thanos, que está determinado a reunir todas as Joias do Infinito e impor sua vontade sobre toda a realidade.",
+      "avaliacao": "8.4",
+      "imagemdesktop": "/assets/imgs/filmes/guerrainfinita.webp",
+      "imagemmobile": "/assets/imgs/filmes/guerrainfinita.webp",
+      "trailer": "https://www.youtube.com/watch?v=4jGRyEa2jhE",
+      "atores": [
+        "Robert Downey Jr.",
+        "Chris Hemsworth",
+        "Mark Ruffalo",
+        "Chris Evans"
+      ],
+      "criadores": [
+        "Anthony Russo",
+        "Joe Russo"
+      ],
+      "duracao": "149 minutos",
+      "filming_locations": [
+        {
+          "name": "Pinewood Atlanta Studios, Fayetteville, Georgia, USA",
+          "latitude": [-84.4977, 33.4718]
+        },
+        {
+          "name": "Edinburgh, Scotland",
+          "latitude": [-3.1883, 55.9533]
+        },
+        {
+          "name": "New York City, USA",
+          "latitude": [-74.0060, 40.7128]
+        }
+      ]
+    }
+  ],
+  "favoritos": [
+    {
+      "userId": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "filmId": 1
+    },
+    {
+      "userId": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "filmId": 2
+    },
+    {
+      "userId": "187cb7e5-e097-4224-8bc7-b610c855e2b1",
+      "filmId": 4
+    }
+  ],
+  "scripts": {
+    "start": "json-server --watch db/db.json --port 3000 --static ./public"
+  }
+}

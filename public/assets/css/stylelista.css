@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    font-size: 20px;
+    color: #F5F5F5;
+
+}
+
+body {
+    background-color: #0A0F1E;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* inicio da NAV MENU */
+h1 {
+    font-size: 1.5em;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+div ul {
+    display: flex;
+    list-style: none;
+}
+
+div .header{
+    margin-left: 120px;
+}
+
+a {
+    text-decoration: none;
+    margin-left: 0.9em;
+}
+
+a:hover {
+    color: #0088FF;
+    text-shadow: 2px 2px 5px#081020;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+input {
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+}
+
+
+#hidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#menu {
+    background: linear-gradient(to bottom, #0A0F1E 0%, rgba(0, 0, 0, 0) 100%);
+    position: fixed;
+    width: 100%;
+    height: 3.2rem;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    z-index: 2;
+}
+
+#logo {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0;
+}
+
+#pesquisa {
+    background-color: #F5F5F5;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+
+#search {
+    cursor: pointer;
+    background: url('imgs/pesquisa.png') no-repeat center;
+    width: 30px;
+    height: 30px;
+    background-size: 20px;
+}
+
+#toggle,
+#menuIcon {
+    display: none;
+}
+
+#toggle {
+    display: none;
+}
+
+
+#toggleSearch,
+#searchIcon {
+    display: none;
+}
+
+#toggleSearch {
+    display: none;
+}
+
+#pesquisamedia {
+    position: absolute;
+    right: 65px;
+    width: 7em;
+    margin-bottom: 0em;
+    margin-left: 0px;
+    padding: 0px;
+    max-width: 100%;
+    display: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0px;
+}
+
+#campoPesquisaMedia {
+    width: 5em;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    background-color: white;
+}
+/* Fim da NAV MENU */
+
+/* Inicio do MAIN */
+main {
+    padding-top: 5em;
+    padding-left: 2em;
+}
+div img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    /* border-top-right-radius: 20px; */
+    margin: 0px auto;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 2em;
+    padding-bottom: 80px;
+}
+
+.miniBoxFilme {
+    width: 16em;
+    height: 9em;
+    margin: 0.9em;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #081020;
+    border: 3px solid #081020;
+    flex-shrink: 0;
+    transition: 0.5s;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+    z-index: 1; /* Ensure miniBoxFilme is in front */
+}
+
+.boxFilme {
+    position: absolute; /* Change to absolute positioning */
+    bottom: -55%; /* Position at the bottom of miniBoxFilme */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0033CC;
+    width: 18em;
+    height: 6em;
+    margin: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0px 0px 20px #00A2FF;
+    border: 3px solid #081020;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    z-index: -1; /* Ensure boxFilme is behind miniBoxFilme */
+}
+
+.miniBoxFilme:hover .boxFilme,
+.boxFilme:hover {
+    border: 4px solid #00A2FF;
+    box-shadow: 0px 0px 20px #00A2FF;
+    cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+}
+
+.miniBoxFilme:hover {
+    border: 4px solid #00A2FF;
+    height: 10em;
+    width: 18em;
+    transform: scale(0.8);
+    box-shadow: 0px 0px 20px #00A2FF;
+    cursor: pointer;
+    z-index: 10; /* Ensure miniBoxFilme overlaps other items */
+    position: relative; /* Ensure it stays in the same place */
+    margin-top: -2em; /* Adjust as needed to move up */
+    transition: transform 0.5s ease, margin-top 0.5s ease; /* Smooth transition */
+}
+
+
+.filmeSpecs {
+    margin: 0.5em 1.3em;
+}
+
+.filmeSpecs div {
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.likeAdd {
+    margin: 0.3em 1.3em;
+    padding-top: 10px;
+}
+
+.fa-heart-o {
+    background: transparent;
+    color: #F5F5F5;
+}
+.likeAdd .fa-plus {
+    background: transparent;
+    color: #F5F5F5;
+}
+
+.likeAdd button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+/* Fim da Main */
+
+/* Inicio do footer */
+.footer {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer ul li a {
+    font-size: 0.6em;
+    color: #F5F5F5;
+}
+
+
+
+/* Fim do Footer */
+
+@media screen and (max-width: 840px) {
+
+    /* HEADER */
+    #pesquisa {
+        display: none;
+    }
+
+    #hidebar {
+        display: none;
+        background-color: #0A0F1E;
+        position: fixed;
+        width: 100vw;
+        max-width: 100%;
+        height: 35%;
+        bottom: 0;
+        left: 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 20px;
+        box-shadow: 0px -10px 20px #00A2FF;
+        z-index: 1000;
+    }
+
+    .menu {
+        display: block;
+        margin: 0px 0px;
+        padding: 0px;
+    }
+
+    .menu ul {
+        display: block;
+        margin: 1em 0;
+        padding: 0px;
+        max-width: 100%;
+    }
+
+    .menu ul:nth-child(3) {
+        margin: 0px;
+    }
+
+    .menu li {
+        margin: 1em 0;
+        max-width: 100%;
+    }
+
+    .menu li:first-child {
+        margin: 0px 0;
+    }
+
+    #pesquisa {
+        width: 7em;
+        margin-bottom: 1em;
+        margin-left: 15px;
+        padding: 0px;
+        max-width: 100%;
+    }
+
+    #campoPesquisa {
+        width: 5em;
+        margin: 0px;
+        padding: 0px;
+        max-width: 100%;
+    }
+
+    #direito {
+        display: block;
+        margin: 0px 0;
+        max-width: 100%;
+    }
+
+    #menuIcon {
+        display: block;
+        cursor: pointer;
+        font-size: 1em;
+        color: #F5F5F5;
+    }
+
+    #menuIcon i.fa-bars {
+        display: inline;
+    }
+
+    #menuIcon i.fa-times {
+        display: none;
+    }
+
+    #toggle:checked+#menuIcon i.fa-bars {
+        display: none;
+    }
+
+    #toggle:checked+#menuIcon i.fa-times {
+        display: inline;
+    }
+
+    #toggle:checked~#hidebar {
+        display: block;
+    }
+
+    #searchIcon {
+        display: block;
+        cursor: pointer;
+        font-size: 1em;
+        color: #F5F5F5;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    #searchIcon i.fa-search {
+        display: inline;
+    }
+
+    #searchIcon i.fa-times {
+        display: none;
+    }
+
+    #toggleSearch:checked+#searchIcon i.fa-search {
+        display: none;
+    }
+
+    #toggleSearch:checked+#searchIcon i.fa-times {
+        display: inline;
+    }
+
+    #toggleSearch:checked~#pesquisamedia {
+        display: block;
+        z-index: 1000;
+    }
+
+}
